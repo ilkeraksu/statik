@@ -266,14 +266,15 @@ func generateSource(srcPath string, includes string) (file *os.File, err error) 
 package %s
 
 import (
-	"github.com/rakyll/statik/fs"
+	// "github.com/rakyll/statik/fs"
 )
-
+var Data string
 func init() {
 	data := "`, tags, comment, namePackage)
 	FprintZipData(&qb, buffer.Bytes())
 	fmt.Fprint(&qb, `"
-	fs.Register(data)
+	//fs.Register(data)
+	Data = data
 }
 `)
 

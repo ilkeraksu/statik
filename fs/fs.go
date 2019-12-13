@@ -18,7 +18,6 @@ package fs
 import (
 	"archive/zip"
 	"bytes"
-	"errors"
 	"fmt"
 	"io"
 	"io/ioutil"
@@ -53,10 +52,10 @@ func Register(data string) {
 
 // New creates a new file system with the registered zip contents data.
 // It unzips all files and stores them in an in-memory map.
-func New() (http.FileSystem, error) {
-	if zipData == "" {
-		return nil, errors.New("statik/fs: no zip data registered")
-	}
+func New(zipData string) (http.FileSystem, error) {
+	// if zipData == "" {
+	// 	return nil, errors.New("statik/fs: no zip data registered")
+	// }
 	zipReader, err := zip.NewReader(strings.NewReader(zipData), int64(len(zipData)))
 	if err != nil {
 		return nil, err

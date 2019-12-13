@@ -2,6 +2,12 @@
 
 [![Build Status](https://travis-ci.org/rakyll/statik.svg?branch=master)](https://travis-ci.org/rakyll/statik)
 
+Forked from https://github.com/rakyll/statik
+
+DO NOT USE, CHANGED / BROKEN API 
+
+Use https://github.com/rakyll/statik instead
+
 statik allows you to embed a directory of static files into your Go binary to be later served from an http.FileSystem.
 
 Is this a crazy idea? No, not necessarily. If you're building a tool that has a Web component, you typically want to serve some images, CSS and JavaScript. You like the comfort of distributing a single binary, so you don't want to mess with deploying them elsewhere. If your static files are not large in size and will be browsed by a few people, statik is a solution you are looking for.
